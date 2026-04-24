@@ -1,10 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Code2, Users, Star, GitCommit } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import Image from "next/image";
+import { StatCard } from "@/components/about/stat-card";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,12 +18,14 @@ export default function About() {
   const imageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
+  const [shouldStartCounter, setShouldStartCounter] = useState(false);
+
 
   const stats = [
     { value: t("stats.projects.value"), label: t("stats.projects.label"), icon: Code2 },
-    { value: t("stats.years.value"),    label: t("stats.years.label"),    icon: Star },
-    { value: t("stats.clients.value"),  label: t("stats.clients.label"),  icon: Users },
-    { value: t("stats.commits.value"),  label: t("stats.commits.label"),  icon: GitCommit },
+    { value: t("stats.years.value"), label: t("stats.years.label"), icon: Star },
+    { value: t("stats.clients.value"), label: t("stats.clients.label"), icon: Users },
+    { value: t("stats.commits.value"), label: t("stats.commits.label"), icon: GitCommit },
   ];
 
   useEffect(() => {
@@ -57,6 +63,15 @@ export default function About() {
           },
         }
       );
+
+      ScrollTrigger.create({
+      trigger: statsRef.current,
+      start: "top 85%",
+      once: true,
+      onEnter: () => {
+        setShouldStartCounter(true);
+      },
+    });
 
       // Stats
       gsap.fromTo(
@@ -126,22 +141,14 @@ export default function About() {
 
             {/* Stats grid */}
             <div ref={statsRef} className="grid grid-cols-2 gap-4 pt-4">
-              {stats.map(({ value, label, icon: Icon }) => (
-                <div
+              {stats.map(({ value, label, icon }) => (
+                 <StatCard
                   key={label}
-                  className="stat-card glass rounded-xl p-5 border hover:border-violet-500/40 transition-colors duration-300 group"
-                  style={{ borderColor: "var(--border-color)" }}
-                >
-                  <div className="flex items-start justify-between mb-2">
-                    <span className="text-3xl font-black text-gradient">{value}</span>
-                    <Icon
-                      size={18}
-                      className="opacity-40 group-hover:opacity-70 transition-opacity"
-                      style={{ color: "var(--accent-cyan)" }}
-                    />
-                  </div>
-                  <p className="text-sm" style={{ color: "var(--text-muted)" }}>{label}</p>
-                </div>
+                  value={value}
+                  label={label}
+                  icon={icon}
+                  shouldAnimate={shouldStartCounter}
+                />
               ))}
             </div>
           </div>
@@ -159,15 +166,49 @@ export default function About() {
                 className="absolute inset-0 rounded-full overflow-hidden glass border"
                 style={{ borderColor: "var(--border-color)" }}
               >
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Mohamed Ayman"
+                  fill
+                  className="object-cover"
+                  priority
+                />
                 <div
-                  className="w-full h-full flex items-center justify-center"
+                  className="absolute inset-0"
                   style={{
                     background: "linear-gradient(135deg, rgba(124,58,237,0.3) 0%, rgba(6,182,212,0.2) 100%)",
                   }}
-                >
-                  <span className="text-8xl font-black text-gradient select-none">AM</span>
-                </div>
+                />
               </div>
+              {/* Social Icons - Positioned on the circle */}
+              <a
+                href="https://www.linkedin.com/in/mohamedayman13/" // Replace with your LinkedIn URL
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
+                className="absolute -top-4 -start-4 glass p-3 rounded-xl border transition-all duration-300 hover:border-cyan-500/60 hover:scale-110 hover:-translate-x-1 group float-1"
+                style={{ borderColor: "var(--border-color)" }}
+              >
+                <FaLinkedin
+                  size={20}
+                  className="transition-colors group-hover:opacity-100 opacity-70"
+                  style={{ color: "var(--accent-cyan)" }}
+                />
+              </a>
+              <a
+                href="https://github.com/mohamed080/" // Replace with your GitHub URL
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit GitHub profile"
+                className="absolute -bottom-4 -end-4 glass p-3 rounded-xl border transition-all duration-300 hover:border-cyan-500/60 hover:scale-110 hover:-translate-x-1 group float-2"
+                style={{ borderColor: "var(--border-color)" }}
+              >
+                <FaGithub
+                  size={20}
+                  className="transition-colors group-hover:opacity-100 opacity-70"
+                  style={{ color: "var(--accent-cyan)" }}
+                />
+              </a>
               {/* Floating badges */}
               <div
                 className="absolute -top-4 -end-4 glass px-4 py-2 rounded-xl border text-xs font-semibold float-1"
@@ -177,9 +218,9 @@ export default function About() {
               </div>
               <div
                 className="absolute -bottom-4 -start-4 glass px-4 py-2 rounded-xl border text-xs font-semibold float-2"
-                style={{ borderColor: "var(--border-color)", color: "var(--accent-cyan)" }}
+                style={{ borderColor: "var(--border-glow)", color: "var(--accent-violet)" }}
               >
-                5+ Years XP
+                1.5+ Years XP
               </div>
             </div>
           </div>

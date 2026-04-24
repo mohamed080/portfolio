@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme inline {
   --color-navy-950: #020817;
   --color-navy-900: #0a0f2e;
@@ -16,7 +17,7 @@
   --color-cyan-400: #22d3ee;
   --color-cyan-300: #67e8f9;
 
-  --color-slate-50:  #f8fafc;
+  --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   --color-slate-200: #e2e8f0;
   --color-slate-300: #cbd5e1;
@@ -72,10 +73,10 @@
 }
 
 /* ─── Base Styles ────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -94,11 +95,18 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
 /* ─── Custom Scrollbar ───────────────────────────────── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--accent-violet), var(--accent-cyan));
   border-radius: 99px;
@@ -112,39 +120,85 @@ body {
 
 /* ─── Keyframe Animations ────────────────────────────── */
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-18px) rotate(2deg); }
-  66% { transform: translateY(-10px) rotate(-1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-18px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); }
-  50% { box-shadow: 0 0 60px rgba(139, 92, 246, 0.8), 0 0 20px rgba(6, 182, 212, 0.4); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.8), 0 0 20px rgba(6, 182, 212, 0.4);
+  }
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 @keyframes cursor-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
 }
 
 /* ─── Utility Classes ────────────────────────────────── */
@@ -155,8 +209,13 @@ body {
   border: 1px solid var(--border-color);
 }
 
-.glow-violet { box-shadow: var(--shadow-glow-violet); }
-.glow-cyan { box-shadow: var(--shadow-glow-cyan); }
+.glow-violet {
+  box-shadow: var(--shadow-glow-violet);
+}
+
+.glow-cyan {
+  box-shadow: var(--shadow-glow-cyan);
+}
 
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-violet), var(--accent-cyan));
@@ -202,8 +261,13 @@ body {
 }
 
 /* ─── 3D Card Perspective ────────────────────────────── */
-.perspective { perspective: 1000px; }
-.preserve-3d { transform-style: preserve-3d; }
+.perspective {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
 
 /* ─── Page Transition overlay ────────────────────────── */
 .page-transition {
@@ -238,6 +302,7 @@ body {
 .animated-border {
   position: relative;
 }
+
 .animated-border::before {
   content: "";
   position: absolute;
@@ -253,9 +318,17 @@ body {
 }
 
 /* ─── Float shapes ───────────────────────────────────── */
-.float-1 { animation: float 6s ease-in-out infinite; }
-.float-2 { animation: float 8s ease-in-out infinite 1s; }
-.float-3 { animation: float 7s ease-in-out infinite 2s; }
+.float-1 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-2 {
+  animation: float 8s ease-in-out infinite 1s;
+}
+
+.float-3 {
+  animation: float 7s ease-in-out infinite 2s;
+}
 
 /* ─── Progress bar top ───────────────────────────────── */
 .progress-bar {
