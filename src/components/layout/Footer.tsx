@@ -7,9 +7,9 @@
     const year = new Date().getFullYear();
 
     const socials = [
-      { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-      { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-      { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+      { icon: FaGithub, href: "https://github.com/mohamed080", label: "GitHub" },
+      { icon: FaLinkedin, href: "https://www.linkedin.com/in/mohamedayman13", label: "LinkedIn" },
+      { icon: FaTwitter, href: "https://x.com/Mohamed16193852", label: "Twitter" },
     ];
 
     return (

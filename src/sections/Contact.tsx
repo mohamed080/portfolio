@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
+  email: z.email("Please enter a valid email address"),
   subject: z.string().min(3, "Subject must be at least 3 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
@@ -151,16 +151,29 @@ export default function Contact() {
 
   const onSubmit = async (_data: FormData) => {
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitting(false);
-    setSubmitted(true);
-    reset();
+    try{
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {          "Content-Type": "application/json"        },
+        body: JSON.stringify(_data),
+      });
+      if(response.ok){
+        setSubmitted(true);
+        reset();
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    }catch(err){
+      console.log(err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const socials = [
-    { icon: FaGithub, href: "https://github.com", label: t("social.github") },
-    { icon: FaLinkedin, href: "https://linkedin.com", label: t("social.linkedin") },
-    { icon: FaTwitter, href: "https://twitter.com", label: t("social.twitter") },
+    { icon: FaGithub, href: "https://github.com/mohamed080", label: t("social.github") },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/mohamedayman13", label: t("social.linkedin") },
+    { icon: FaTwitter, href: "https://x.com/Mohamed16193852", label: t("social.twitter") },
   ];
 
   return (
