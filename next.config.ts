@@ -1,7 +1,22 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
+// import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+// const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
-export default nextConfig;
+// const nextConfig: NextConfig = {
+//   reactCompiler: true,
+//   experimental: {
+//     optimizePackageImports: ["gsap", "lucide-react"],
+//   },
+// };
+
+// export default withNextIntl(nextConfig);
+
+
+import {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const nextConfig: NextConfig = {};
+ 
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme",
+    "switchLang": "AR"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Mohamed Ayman",
+    "roles": ["Frontend Developer", "Open Source Contributor", "Problem Solver"],
+    "tagline": "I craft digital experiences that live at the intersection of design and engineering.",
+    "cta_primary": "View My Work",
+    "cta_secondary": "Download Resume",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "badge": "About Me",
+    "title": "Turning complex\nproblems into elegant\nsolutions.",
+    "bio1": "I'm a Full Stack Engineer with 5+ years of experience building scalable, performant web applications. My passion lies in creating seamless user experiences backed by clean, maintainable code.",
+    "bio2": "When I'm not pushing pixels or writing APIs, you'll find me contributing to open source, exploring new technologies, or mentoring the next generation of developers.",
+    "stats": {
+      "projects": { "value": "50+", "label": "Projects Delivered" },
+      "years": { "value": "5+", "label": "Years Experience" },
+      "clients": { "value": "30+", "label": "Happy Clients" },
+      "commits": { "value": "2K+", "label": "GitHub Commits" }
+    },
+    "image_alt": "Mohamed Ayman — Full Stack Engineer"
+  },
+  "projects": {
+    "badge": "Featured Work",
+    "title": "Projects that\nspeak for themselves.",
+    "subtitle": "A selection of work I'm proud of — from concept to deployment.",
+    "view_live": "Live Demo",
+    "view_code": "Source Code",
+    "items": [
+      {
+        "id": "1",
+        "title": "NexaCommerce",
+        "description": "A headless e-commerce platform built with Next.js, Stripe, and a custom CMS. Handles 10k+ daily transactions with 99.9% uptime.",
+        "tags": ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+        "category": "Full Stack"
+      },
+      {
+        "id": "2",
+        "title": "DesignFlow",
+        "description": "A real-time collaborative design tool with WebSocket-powered live cursors, version history, and export to multiple formats.",
+        "tags": ["React", "WebSockets", "Canvas API", "Node.js"],
+        "category": "Frontend"
+      },
+      {
+        "id": "3",
+        "title": "DataPulse",
+        "description": "An AI-powered analytics dashboard with predictive insights, custom chart builder, and automated PDF reporting.",
+        "tags": ["Python", "React", "D3.js", "FastAPI"],
+        "category": "Full Stack"
+      },
+      {
+        "id": "4",
+        "title": "AuthShield",
+        "description": "A production-grade authentication microservice with OAuth2, MFA, rate limiting, and audit logging built on Go.",
+        "tags": ["Go", "Redis", "PostgreSQL", "Docker"],
+        "category": "Backend"
+      },
+      {
+        "id": "5",
+        "title": "MobileFirst",
+        "description": "A cross-platform mobile app for task management with offline sync, push notifications, and AI-powered prioritization.",
+        "tags": ["React Native", "Expo", "GraphQL", "AWS"],
+        "category": "Mobile"
+      },
+      {
+        "id": "6",
+        "title": "OpenMetrics",
+        "description": "An open-source monitoring tool for distributed systems with real-time alerting, span tracing, and Kubernetes integration.",
+        "tags": ["TypeScript", "Prometheus", "Grafana", "k8s"],
+        "category": "DevOps"
+      }
+    ]
+  },
+  "skills": {
+    "badge": "Technical Skills",
+    "title": "Technologies I\nlive and breathe.",
+    "subtitle": "A toolkit refined through years of real-world engineering.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools & DevOps"
+    },
+    "items": {
+      "frontend": [
+        { "name": "React / Next.js", "level": 95 },
+        { "name": "TypeScript", "level": 92 },
+        { "name": "Tailwind CSS", "level": 90 },
+        { "name": "GSAP / Framer Motion", "level": 85 },
+        { "name": "Vue.js", "level": 75 }
+      ],
+      "backend": [
+        { "name": "Node.js / Express", "level": 90 },
+        { "name": "Python / FastAPI", "level": 82 },
+        { "name": "Go", "level": 70 },
+        { "name": "PostgreSQL", "level": 88 },
+        { "name": "Redis", "level": 80 }
+      ],
+      "tools": [
+        { "name": "Docker / Kubernetes", "level": 78 },
+        { "name": "AWS / GCP", "level": 75 },
+        { "name": "CI/CD (GitHub Actions)", "level": 85 },
+        { "name": "Git", "level": 95 },
+        { "name": "Figma", "level": 80 }
+      ]
+    }
+  },
+  "experience": {
+    "badge": "Experience",
+    "title": "Where I've\nbeen building.",
+    "items": [
+      {
+        "id": "1",
+        "role": "Senior Full Stack Engineer",
+        "company": "TechNova Inc.",
+        "period": "2023 — Present",
+        "location": "San Francisco, CA (Remote)",
+        "description": "Leading a team of 6 engineers to build and scale a SaaS platform serving 200K+ users. Architected a micro-frontend system that reduced build times by 60%.",
+        "tags": ["Next.js", "Go", "Kubernetes", "AWS"]
+      },
+      {
+        "id": "2",
+        "role": "Full Stack Developer",
+        "company": "Pixel & Code Studio",
+        "period": "2021 — 2023",
+        "location": "New York, NY",
+        "description": "Delivered 15+ client projects from discovery to deployment. Specialized in performant React frontends and Node.js APIs. Introduced TypeScript across the entire codebase.",
+        "tags": ["React", "Node.js", "PostgreSQL", "TypeScript"]
+      },
+      {
+        "id": "3",
+        "role": "Frontend Developer",
+        "company": "Bright Digital Agency",
+        "period": "2020 — 2021",
+        "location": "Austin, TX",
+        "description": "Built responsive marketing sites and interactive web experiences for Fortune 500 clients. Pioneered the adoption of modern animation libraries.",
+        "tags": ["JavaScript", "GSAP", "Sass", "WordPress"]
+      },
+      {
+        "id": "4",
+        "role": "Junior Developer",
+        "company": "StartHub Labs",
+        "period": "2019 — 2020",
+        "location": "Remote",
+        "description": "First engineering role. Developed internal tools and dashboards using Vue.js. Learned the fundamentals of agile development and CI/CD pipelines.",
+        "tags": ["Vue.js", "Python", "MySQL", "Jenkins"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Let's build\nsomething great.",
+    "subtitle": "Have a project in mind, a question, or just want to say hi? I'm always open to new opportunities.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success_title": "Message sent!",
+      "success_desc": "Thank you for reaching out. I'll get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "email": "alex@morgancodes.dev",
+      "location": "San Francisco, CA",
+      "availability": "Available for freelance"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "dribbble": "Dribbble"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built_with": "Built with Next.js & ❤️"
+  },
+  "loader": {
+    "loading": "Loading"
+  }
+}

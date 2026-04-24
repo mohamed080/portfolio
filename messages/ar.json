@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "about": "عنّي",
+    "projects": "الأعمال",
+    "skills": "المهارات",
+    "experience": "الخبرة",
+    "contact": "التواصل",
+    "toggleTheme": "تبديل المظهر",
+    "switchLang": "EN"
+  },
+  "hero": {
+    "greeting": "مرحباً، أنا",
+    "name": "أليكس مورغان",
+    "roles": ["مهندس برمجيات متكامل", "مساهم في المصدر المفتوح", "حلّال مشكلات"],
+    "tagline": "أصنع تجارب رقمية تقف عند تقاطع التصميم والهندسة.",
+    "cta_primary": "استعرض أعمالي",
+    "cta_secondary": "تحميل السيرة الذاتية",
+    "scroll": "انتقل للاستكشاف"
+  },
+  "about": {
+    "badge": "عنّي",
+    "title": "تحويل المشكلات\nالمعقدة إلى حلول\nأنيقة.",
+    "bio1": "مهندس برمجيات متكامل بخبرة تمتد لأكثر من 5 سنوات في بناء تطبيقات ويب قابلة للتوسع وعالية الأداء. شغفي يكمن في إنشاء تجارب مستخدم سلسة مدعومة بكود نظيف وقابل للصيانة.",
+    "bio2": "حين لا أكون منهمكاً في التصميم أو كتابة واجهات برمجية، تجدني أساهم في المشاريع مفتوحة المصدر، أو أستكشف التقنيات الجديدة، أو أرشد الجيل القادم من المطورين.",
+    "stats": {
+      "projects": { "value": "+50", "label": "مشروع مُسلَّم" },
+      "years": { "value": "+5", "label": "سنوات خبرة" },
+      "clients": { "value": "+30", "label": "عميل راضٍ" },
+      "commits": { "value": "+2K", "label": "Git Commit" }
+    },
+    "image_alt": "أليكس مورغان — مهندس برمجيات متكامل"
+  },
+  "projects": {
+    "badge": "أبرز الأعمال",
+    "title": "مشاريع تتحدث\nعن نفسها.",
+    "subtitle": "مجموعة مختارة من أعمالي التي أفخر بها — من الفكرة إلى النشر.",
+    "view_live": "عرض مباشر",
+    "view_code": "الكود المصدري",
+    "items": [
+      {
+        "id": "1",
+        "title": "NexaCommerce",
+        "description": "منصة تجارة إلكترونية بدون رأس مبنية على Next.js وStripe ونظام إدارة محتوى مخصص. تعالج أكثر من 10 آلاف معاملة يومية بوقت تشغيل 99.9%.",
+        "tags": ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+        "category": "متكامل"
+      },
+      {
+        "id": "2",
+        "title": "DesignFlow",
+        "description": "أداة تصميم تعاوني في الوقت الفعلي مع مؤشرات حية مدعومة بـ WebSocket وسجل إصدارات وتصدير بأشكال متعددة.",
+        "tags": ["React", "WebSockets", "Canvas API", "Node.js"],
+        "category": "واجهة أمامية"
+      },
+      {
+        "id": "3",
+        "title": "DataPulse",
+        "description": "لوحة تحليلات مدعومة بالذكاء الاصطناعي مع رؤى تنبؤية ومنشئ مخططات مخصص وتقارير PDF آلية.",
+        "tags": ["Python", "React", "D3.js", "FastAPI"],
+        "category": "متكامل"
+      },
+      {
+        "id": "4",
+        "title": "AuthShield",
+        "description": "خدمة مصغرة لمصادقة جاهزة للإنتاج مع OAuth2 والمصادقة الثنائية وتحديد المعدل وتسجيل المراجعة.",
+        "tags": ["Go", "Redis", "PostgreSQL", "Docker"],
+        "category": "خادم"
+      },
+      {
+        "id": "5",
+        "title": "MobileFirst",
+        "description": "تطبيق جوال متعدد المنصات لإدارة المهام مع مزامنة دون اتصال وإشعارات فورية وتحديد أولويات بالذكاء الاصطناعي.",
+        "tags": ["React Native", "Expo", "GraphQL", "AWS"],
+        "category": "جوال"
+      },
+      {
+        "id": "6",
+        "title": "OpenMetrics",
+        "description": "أداة مراقبة مفتوحة المصدر للأنظمة الموزعة مع تنبيهات فورية وتتبع النطاق وتكامل Kubernetes.",
+        "tags": ["TypeScript", "Prometheus", "Grafana", "k8s"],
+        "category": "DevOps"
+      }
+    ]
+  },
+  "skills": {
+    "badge": "المهارات التقنية",
+    "title": "تقنيات أعيش\nوأتنفس معها.",
+    "subtitle": "مجموعة أدوات مصقولة عبر سنوات من الهندسة الفعلية.",
+    "categories": {
+      "frontend": "الواجهة الأمامية",
+      "backend": "الخادم",
+      "tools": "الأدوات وDevOps"
+    },
+    "items": {
+      "frontend": [
+        { "name": "React / Next.js", "level": 95 },
+        { "name": "TypeScript", "level": 92 },
+        { "name": "Tailwind CSS", "level": 90 },
+        { "name": "GSAP / Framer Motion", "level": 85 },
+        { "name": "Vue.js", "level": 75 }
+      ],
+      "backend": [
+        { "name": "Node.js / Express", "level": 90 },
+        { "name": "Python / FastAPI", "level": 82 },
+        { "name": "Go", "level": 70 },
+        { "name": "PostgreSQL", "level": 88 },
+        { "name": "Redis", "level": 80 }
+      ],
+      "tools": [
+        { "name": "Docker / Kubernetes", "level": 78 },
+        { "name": "AWS / GCP", "level": 75 },
+        { "name": "CI/CD (GitHub Actions)", "level": 85 },
+        { "name": "Git", "level": 95 },
+        { "name": "Figma", "level": 80 }
+      ]
+    }
+  },
+  "experience": {
+    "badge": "الخبرة",
+    "title": "حيث كنت\nأبني وأطوّر.",
+    "items": [
+      {
+        "id": "1",
+        "role": "مهندس برمجيات متكامل أول",
+        "company": "TechNova Inc.",
+        "period": "2023 — حتى الآن",
+        "location": "سان فرانسيسكو (عن بُعد)",
+        "description": "أقود فريقاً من 6 مهندسين لبناء وتوسيع منصة SaaS تخدم أكثر من 200 ألف مستخدم. صممت نظام micro-frontend خفّض أوقات البناء بنسبة 60%.",
+        "tags": ["Next.js", "Go", "Kubernetes", "AWS"]
+      },
+      {
+        "id": "2",
+        "role": "مطور برمجيات متكامل",
+        "company": "Pixel & Code Studio",
+        "period": "2021 — 2023",
+        "location": "نيويورك",
+        "description": "أنجزت أكثر من 15 مشروع عميل من الاكتشاف حتى النشر. تخصصت في واجهات React عالية الأداء وواجهات API بـ Node.js.",
+        "tags": ["React", "Node.js", "PostgreSQL", "TypeScript"]
+      },
+      {
+        "id": "3",
+        "role": "مطور واجهات أمامية",
+        "company": "Bright Digital Agency",
+        "period": "2020 — 2021",
+        "location": "أوستن، تكساس",
+        "description": "بنيت مواقع تسويقية متجاوبة وتجارب ويب تفاعلية لعملاء من قائمة Fortune 500. ريادة اعتماد مكتبات الرسوم المتحركة الحديثة.",
+        "tags": ["JavaScript", "GSAP", "Sass", "WordPress"]
+      },
+      {
+        "id": "4",
+        "role": "مطور مبتدئ",
+        "company": "StartHub Labs",
+        "period": "2019 — 2020",
+        "location": "عن بُعد",
+        "description": "أول وظيفة هندسية. طورت أدوات داخلية ولوحات تحكم باستخدام Vue.js. تعلمت أسس التطوير الرشيق وخطوط CI/CD.",
+        "tags": ["Vue.js", "Python", "MySQL", "Jenkins"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "تواصل معي",
+    "title": "لنبني\nشيئاً رائعاً.",
+    "subtitle": "لديك مشروع، سؤال، أو تريد فقط أن تقول مرحباً؟ أنا دائماً منفتح على الفرص الجديدة.",
+    "form": {
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "subject": "الموضوع",
+      "message": "رسالتك",
+      "submit": "إرسال الرسالة",
+      "sending": "جارٍ الإرسال...",
+      "success_title": "تم إرسال الرسالة!",
+      "success_desc": "شكراً للتواصل. سأرد عليك خلال 24 ساعة.",
+      "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+    },
+    "info": {
+      "email": "alex@morgancodes.dev",
+      "location": "سان فرانسيسكو، كاليفورنيا",
+      "availability": "متاح للعمل الحر"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "dribbble": "Dribbble"
+    }
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة.",
+    "built_with": "مبني بـ Next.js و ❤️"
+  },
+  "loader": {
+    "loading": "جارٍ التحميل"
+  }
+}
