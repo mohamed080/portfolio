@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { gsap } from "gsap";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 const ROLES_EN = ["Full Stack Engineer", "UI/UX Enthusiast", "Open Source Contributor", "Problem Solver"];
 const ROLES_AR = ["مهندس برمجيات متكامل", "مطور واجهات وتجارب", "مساهم في المصدر المفتوح", "حلّال مشكلات"];
@@ -12,12 +13,12 @@ const ROLES_AR = ["مهندس برمجيات متكامل", "مطور واجها
 export default function Hero() {
   const t = useTranslations("hero");
   const sectionRef = useRef<HTMLElement>(null);
-  const greetingRef = useRef<HTMLSpanElement>(null);
+  const greetingRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
   const taglineRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const roleRef = useRef<HTMLSpanElement>(null);
+  const roleRef = useRef<HTMLDivElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -209,8 +210,8 @@ export default function Hero() {
               </span>
             </button>
 
-            <a
-              href="/resume.pdf"
+            <Link
+              href="/cv/Mohamed Ayman - Frontend_Developer.pdf"
               className="group flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm border transition-all duration-300 hover:scale-105"
               style={{
                 borderColor: "var(--border-color)",
@@ -221,7 +222,7 @@ export default function Hero() {
             >
               <Download size={15} />
               {t("cta_secondary")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

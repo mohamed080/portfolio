@@ -2,11 +2,14 @@
 
 import { useEffect, useRef, useCallback } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { ScrollTrigger as ScrollTriggerType } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type GSAPCallback = (gsap: typeof import("gsap").gsap, ScrollTrigger: typeof ScrollTrigger) => gsap.core.Timeline | void;
+type GSAPCallback = (
+  gsap: typeof import("gsap").gsap,
+  ScrollTrigger: typeof ScrollTriggerType
+) => gsap.core.Timeline | void;
 
 export function useGSAPAnimation(callback: GSAPCallback, deps: React.DependencyList = []) {
   const ctx = useRef<gsap.Context | null>(null);
