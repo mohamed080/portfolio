@@ -8,7 +8,7 @@ import { MapPin, Calendar } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const EXP_IDS = ["0", "1", "2", "3"] as const;
+const EXP_IDS = ["0", "1", "2"] as const;
 
 export default function Experience() {
   const t = useTranslations("experience");
@@ -82,7 +82,7 @@ export default function Experience() {
       style={{ background: "var(--bg-primary)" }}
     >
       <div
-        className="absolute start-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[130px] pointer-events-none"
+        className="absolute inset-s-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[130px] pointer-events-none"
         style={{ background: "var(--accent-violet)", opacity: 0.08 }}
       />
 
@@ -111,7 +111,7 @@ export default function Experience() {
         <div className="relative">
           {/* Vertical line */}
           <div
-            className="absolute start-6 top-0 bottom-0 w-[1px] hidden sm:block"
+            className="absolute inset-s-6 top-0 bottom-0 w-px hidden sm:block"
             style={{ background: "var(--border-color)" }}
           >
             <div
@@ -136,7 +136,7 @@ export default function Experience() {
               return (
                 <div key={id} className="exp-entry relative flex gap-6 sm:gap-10 group">
                   {/* Dot */}
-                  <div className="hidden sm:flex flex-col items-center flex-shrink-0">
+                  <div className="hidden sm:flex flex-col items-center shrink-0">
                     <div
                       className="exp-dot w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 transition-all duration-300 group-hover:scale-110"
                       style={{
@@ -177,7 +177,7 @@ export default function Experience() {
                       </div>
                       {i === 0 && (
                         <span
-                          className="text-xs px-2.5 py-1 rounded-full font-medium flex-shrink-0"
+                          className="text-xs px-2.5 py-1 rounded-full font-medium shrink-0"
                           style={{
                             background: "rgba(16,185,129,0.15)",
                             color: "#10b981",

@@ -16,7 +16,7 @@ export function StatCard({ value, label, icon: Icon, shouldAnimate }: StatCardPr
   const suffix = value.replace(/[0-9.]/g, '');
   const isDecimal = value.includes('.');
   
-  const count = useCounter(numericValue, 2000, shouldAnimate);
+  const count = useCounter(numericValue, 2500, shouldAnimate);
   
   // Format based on whether the original string had a decimal
   const displayValue = isDecimal 

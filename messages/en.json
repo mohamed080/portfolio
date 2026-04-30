@@ -28,7 +28,7 @@
       "clients": { "value": "10+", "label": "Happy Clients" },
       "commits": { "value": "500+", "label": "GitHub Commits" }
     },
-    "image_alt": "Mohamed Ayman — Full Stack Engineer"
+    "image_alt": "Mohamed Ayman — Frontend Developer"
   },
   "projects": {
     "badge": "Featured Work",
@@ -39,45 +39,63 @@
     "items": [
       {
         "id": "1",
-        "title": "NexaCommerce",
-        "description": "A headless e-commerce platform built with Next.js, Stripe, and a custom CMS. Handles 10k+ daily transactions with 99.9% uptime.",
-        "tags": ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-        "category": "Full Stack"
+        "title": "Taleora",
+        "image": "/images/taleora.png",
+        "description": "A high-performance, bilingual (Arabic/English) e-commerce platform for children's books. Features a custom RTL-supported UI, secure Stripe integration, and a comprehensive admin dashboard for inventory and audit logging.",
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS v4", "Zustand", "shadcn/ui", "react-hook-form", "zod"],
+        "category": "Frontend",
+        "liveUrl": "https://taleora-mu.vercel.app/en",
+        "repoUrl": "private"
       },
       {
         "id": "2",
-        "title": "DesignFlow",
-        "description": "A real-time collaborative design tool with WebSocket-powered live cursors, version history, and export to multiple formats.",
-        "tags": ["React", "WebSockets", "Canvas API", "Node.js"],
-        "category": "Frontend"
+        "title": "Sharek - Digital Business Cards SaaS",
+        "image": "/images/sharek.png",
+        "description": "A SaaS platform for creating, managing, and sharing smart digital business cards with corporate dashboard features.",
+        "tags": ["React 19", "Tailwind CSS v4", "Axios", "Socket.io","react-colorful","react-phone-input-2", "swiper"],
+        "category": "Frontend",
+        "liveUrl": "https://sharke1.netlify.app",
+        "repoUrl": "private"
       },
       {
         "id": "3",
-        "title": "DataPulse",
-        "description": "An AI-powered analytics dashboard with predictive insights, custom chart builder, and automated PDF reporting.",
-        "tags": ["Python", "React", "D3.js", "FastAPI"],
-        "category": "Full Stack"
+        "title": "DentalSaaS - Clinic Management System",
+        "image": "/images/dentalSaaS.png",
+        "description": "A scalable SaaS platform for dental clinics offering an all-in-one management solution. It features interactive dental charting, smart appointment scheduling, automated patient follow-ups via WhatsApp/SMS, and comprehensive financial tracking.",
+        "tags": ["React 18", "MUI", "React Query", "Pusher", "Framer Motion", "MUI X-Charts", "React Router"],
+        "category": "Frontend",
+        "liveUrl": "https://hospital-mangment-ar.vercel.app/login",
+        "repoUrl": "private"
       },
       {
         "id": "4",
-        "title": "AuthShield",
-        "description": "A production-grade authentication microservice with OAuth2, MFA, rate limiting, and audit logging built on Go.",
-        "tags": ["Go", "Redis", "PostgreSQL", "Docker"],
-        "category": "Backend"
+        "title": "EduPlatform - Digital SAT & ACT Prep",
+        "image":"/images/edu.png",
+        "description": "A comprehensive educational platform for standardized test preparation (SAT, EST & ACT). Features timed practice tests with Desmos calculator integration, interactive quiz competitions with real-time VS matchmaking, score analytics with detailed breakdowns, video-based learning courses, and a full admin dashboard for content, subscription, and media management.",
+        "tags": ["React 19", "React Router", "MUI", "Bootstrap 5", "ApexCharts", "KaTeX", "Swiper", "jsPDF"],
+        "category": "Frontend",
+        "liveUrl": "https://educational-platform.netlify.app",
+        "repoUrl": "https://github.com/mohamed080/educational-platform"
       },
       {
         "id": "5",
-        "title": "MobileFirst",
-        "description": "A cross-platform mobile app for task management with offline sync, push notifications, and AI-powered prioritization.",
-        "tags": ["React Native", "Expo", "GraphQL", "AWS"],
-        "category": "Mobile"
+        "title": "FundX - Investment & Equity Crowdfunding",
+        "description": "A comprehensive equity crowdfunding platform that connects investors with promising startups. Features interactive investment portfolios, real-time equity negotiation, customized project discovery based on user preferences, and downloadable financial reports.",
+        "image": "/images/fundx.png",
+        "tags": ["React 19", "React Router", "React Query", "Chart.js", "Bootstrap 5", "jsPDF"],
+        "category": "Frontend",
+        "liveUrl": "https://graduation-projec.netlify.app/",
+        "repoUrl": "https://github.com/mohamed080/graduation-project"
       },
       {
         "id": "6",
-        "title": "OpenMetrics",
-        "description": "An open-source monitoring tool for distributed systems with real-time alerting, span tracing, and Kubernetes integration.",
-        "tags": ["TypeScript", "Prometheus", "Grafana", "k8s"],
-        "category": "DevOps"
+        "title": "Masfer Al-Atifi - Law Firm Website",
+        "image": "/images/masfer.png",
+        "description": "A premium, multi-page Arabic (RTL) website for a leading law firm in Riyadh. Features a cinematic hero with video background, smooth AOS scroll animations, an interactive services showcase, a Swiper-powered blog carousel, founder spotlight, and a full contact system with consultation booking.",
+        "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Swiper.js", "AOS"],
+        "category": "Frontend",
+        "liveUrl": "https://masfer.netlify.app/",
+        "repoUrl": "private"
       }
     ]
   },
@@ -120,39 +138,30 @@
     "items": [
       {
         "id": "1",
-        "role": "Senior Full Stack Engineer",
-        "company": "TechNova Inc.",
-        "period": "2023 — Present",
-        "location": "San Francisco, CA (Remote)",
-        "description": "Leading a team of 6 engineers to build and scale a SaaS platform serving 200K+ users. Architected a micro-frontend system that reduced build times by 60%.",
-        "tags": ["Next.js", "Go", "Kubernetes", "AWS"]
+        "role": "Frontend Developer",
+        "company": "Freelancer",
+        "period": "2025 — Present",
+        "location": "Mansoura, Egypt (Remote)",
+        "description": "Built and architected a bilingual (English/Arabic RTL) e-commerce platform for a children's book and sticker store. Developed a magical, animation-driven UI, a secure checkout flow, protected user profiles, and a comprehensive admin dashboard with audit logging.",
+        "tags": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Zustand", "React-Hook-Form", "Zod", "Framer Motion"]
       },
       {
         "id": "2",
-        "role": "Full Stack Developer",
-        "company": "Pixel & Code Studio",
-        "period": "2021 — 2023",
-        "location": "New York, NY",
-        "description": "Delivered 15+ client projects from discovery to deployment. Specialized in performant React frontends and Node.js APIs. Introduced TypeScript across the entire codebase.",
-        "tags": ["React", "Node.js", "PostgreSQL", "TypeScript"]
+        "role": "Frontend Developer",
+        "company": "Puiux Company",
+        "period": "Nov 2025 — Dec 2025",
+        "location": "Mansoura, Egypt",
+        "description": "Developed foundational components for scalable web applications. Optimized performance using SSR and SSG in Next.js and implemented secure form handling with Zod schema validation.",
+        "tags": ["Next.js", "TypeScript", "React", "React-Query","React-hook-form", "Zod", "GSAP", "REST APIs"]
       },
       {
         "id": "3",
         "role": "Frontend Developer",
-        "company": "Bright Digital Agency",
-        "period": "2020 — 2021",
-        "location": "Austin, TX",
-        "description": "Built responsive marketing sites and interactive web experiences for Fortune 500 clients. Pioneered the adoption of modern animation libraries.",
-        "tags": ["JavaScript", "GSAP", "Sass", "WordPress"]
-      },
-      {
-        "id": "4",
-        "role": "Junior Developer",
-        "company": "StartHub Labs",
-        "period": "2019 — 2020",
-        "location": "Remote",
-        "description": "First engineering role. Developed internal tools and dashboards using Vue.js. Learned the fundamentals of agile development and CI/CD pipelines.",
-        "tags": ["Vue.js", "Python", "MySQL", "Jenkins"]
+       "company": "Codebox Company",
+        "period": "Feb 2024 — May 2025",
+        "location": "Mansoura, Egypt",
+        "description": "Built and maintained over 30 reusable UI components with Redux Toolkit. Improved application speed through code splitting and lazy loading while delivering pixel-perfect, responsive interfaces.",
+        "tags": ["React", "Redux Toolkit", "RESTful APIs", "Responsive Design", "Performance Optimization"]
       }
     ]
   },

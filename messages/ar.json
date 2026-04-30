@@ -44,7 +44,7 @@
         "label": "Git Commit"
       }
     },
-    "image_alt": "محمد ايمن — مهندس برمجيات متكامل"
+    "image_alt": "محمد ايمن — مطور واجهات أمامية"
   },
   "projects": {
     "badge": "أبرز الأعمال",
@@ -55,75 +55,84 @@
     "items": [
       {
         "id": "1",
-        "title": "NexaCommerce",
-        "description": "منصة تجارة إلكترونية بدون رأس مبنية على Next.js وStripe ونظام إدارة محتوى مخصص. تعالج أكثر من 10 آلاف معاملة يومية بوقت تشغيل 99.9%.",
+        "title": "Taleora",
+        "image": "/images/taleora.png",
+        "description": "منصة تجارة إلكترونية متطورة ثنائية اللغة (عربي/إنجليزي) لقصص الأطفال. تتميز بواجهة مستخدم تدعم الاتجاه من اليمين لليسام (RTL)، وربط آمن مع Stripe، ولوحة تحكم إدارية شاملة لإدارة المخزون والسجلات.",
         "tags": [
           "Next.js",
           "TypeScript",
-          "Stripe",
-          "PostgreSQL"
+          "Tailwind CSS v4",
+          "Zustand"
         ],
-        "category": "متكامل"
+        "category": "واجهة أمامية",
+        "liveUrl": "https://taleora-mu.vercel.app/en",
+        "repoUrl": "private"
       },
       {
         "id": "2",
-        "title": "DesignFlow",
-        "description": "أداة تصميم تعاوني في الوقت الفعلي مع مؤشرات حية مدعومة بـ WebSocket وسجل إصدارات وتصدير بأشكال متعددة.",
-        "tags": [
-          "React",
-          "WebSockets",
-          "Canvas API",
-          "Node.js"
-        ],
-        "category": "واجهة أمامية"
+        "title": "شارك - منصة بطاقات العمل الرقمية (SaaS)",
+        "image": "/images/sharek.png",
+        "description": "منصة (SaaS) لإنشاء وإدارة ومشاركة بطاقات العمل الرقمية الذكية مع ميزات لوحة تحكم للشركات.",
+        "tags": ["React 19", "Tailwind CSS v4", "Axios", "Socket.io","react-colorful","react-phone-input-2", "swiper"],
+        "category": "واجهة أمامية",
+        "liveUrl": "https://sharke1.netlify.app",
+        "repoUrl": "private"
       },
       {
         "id": "3",
-        "title": "DataPulse",
-        "description": "لوحة تحليلات مدعومة بالذكاء الاصطناعي مع رؤى تنبؤية ومنشئ مخططات مخصص وتقارير PDF آلية.",
+        "title": "DentalSaaS - نظام إدارة عيادات الأسنان",
+        "image": "/images/hospital.png",
+        "description": "منصة SaaS متكاملة لعيادات الأسنان تقدم حلاً شاملاً للإدارة. تتميز بمخطط تفاعلي للأسنان، وجدولة ذكية للمواعيد، ومتابعة آلية للمرضى عبر واتساب والرسائل القصيرة، وتتبع مالي شامل.",
         "tags": [
-          "Python",
-          "React",
-          "D3.js",
-          "FastAPI"
+          "React 18",
+          "MUI",
+          "React Query",
+          "Pusher",
+          "Framer Motion",
+          "MUI X-Charts",
+          "React Router"
         ],
-        "category": "متكامل"
+        "category": "واجهة أمامية",
+        "liveUrl": "https://hospital-mangment-ar.vercel.app/login",
+        "repoUrl": "private"
       },
       {
         "id": "4",
-        "title": "AuthShield",
-        "description": "خدمة مصغرة لمصادقة جاهزة للإنتاج مع OAuth2 والمصادقة الثنائية وتحديد المعدل وتسجيل المراجعة.",
-        "tags": [
-          "Go",
-          "Redis",
-          "PostgreSQL",
-          "Docker"
-        ],
-        "category": "خادم"
+        "title": "EduPlatform - منصة التحضير لاختبارات SAT و ACT",
+        "image":"/images/edu.png",
+        "description": "منصة تعليمية شاملة للتحضير للاختبارات المعيارية (SAT, EST & ACT). تتميز باختبارات تدريبية مؤقتة مع تكامل آلة حاسبة Desmos، ومسابقات تفاعلية مع مواجهات مباشرة، وتحليلات تفصيلية للدرجات، ودورات تعليمية بالفيديو، ولوحة تحكم إدارية كاملة لإدارة المحتوى والاشتراكات والوسائط.",
+        "tags": ["React 19", "React Router", "MUI", "Bootstrap 5", "ApexCharts", "KaTeX", "Swiper", "jsPDF"],
+        "category": "واجهة أمامية",
+        "liveUrl": "https://educational-platform.netlify.app",
+        "repoUrl": "https://github.com/mohamed080/educational-platform"
       },
       {
         "id": "5",
-        "title": "MobileFirst",
-        "description": "تطبيق جوال متعدد المنصات لإدارة المهام مع مزامنة دون اتصال وإشعارات فورية وتحديد أولويات بالذكاء الاصطناعي.",
-        "tags": [
-          "React Native",
-          "Expo",
-          "GraphQL",
-          "AWS"
+        "title": "FundX - منصة التمويل الجماعي والاستثمار",
+        "image":"/images/edu.png",
+        "description": "منصة شاملة للتمويل الجماعي تربط المستثمرين بالشركات الناشئة الواعدة. تتميز بمحافظ استثمارية تفاعلية، تفاوض على الحصص في الوقت الفعلي، استكشاف مخصص للمشاريع بناءً على تفضيلات المستخدم، وتقارير مالية قابلة للتحميل.",
+       "tags": [
+          "React 19",
+          "React Router",
+          "React Query",
+          "Chart.js",
+          "Bootstrap 5",
+          "jsPDF"
         ],
-        "category": "جوال"
+        "category": "واجهة أمامية",
+        "liveUrl": "https://graduation-projec.netlify.app/",
+        "repoUrl": "https://github.com/mohamed080/graduation-project"
+      
       },
       {
         "id": "6",
-        "title": "OpenMetrics",
-        "description": "أداة مراقبة مفتوحة المصدر للأنظمة الموزعة مع تنبيهات فورية وتتبع النطاق وتكامل Kubernetes.",
-        "tags": [
-          "TypeScript",
-          "Prometheus",
-          "Grafana",
-          "k8s"
-        ],
-        "category": "DevOps"
+        "title": "مسفر العاطفي - موقع مكتب محاماة",
+        "image": "/images/masfer.png",
+        "description": "موقع إلكتروني احترافي متعدد الصفحات باللغة العربية (RTL) لمكتب محاماة رائد في الرياض. يتميز ببطل سينمائي مع خلفية فيديو، وحركات تمرير سلسة (AOS)، وعرض تفاعلي للخدمات، وكاروسيل مدونة بتقنية Swiper، وقسم تعريفي بالمؤسس، ونظام تواصل كامل مع حجز الاستشارات.",
+        "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Swiper.js", "AOS"],
+        "category": "واجهة أمامية",
+        "liveUrl": "https://masfer.netlify.app/",
+        "repoUrl": "private"
       }
     ]
   },
@@ -211,58 +220,53 @@
     "items": [
       {
         "id": "1",
-        "role": "مهندس برمجيات متكامل أول",
-        "company": "TechNova Inc.",
-        "period": "2023 — حتى الآن",
-        "location": "سان فرانسيسكو (عن بُعد)",
-        "description": "أقود فريقاً من 6 مهندسين لبناء وتوسيع منصة SaaS تخدم أكثر من 200 ألف مستخدم. صممت نظام micro-frontend خفّض أوقات البناء بنسبة 60%.",
+        "role": "مطور واجهات أمامية (Frontend Developer)",
+        "company": "عمل حر (Freelance)",
+        "period": "2025 — الحاضر",
+        "location": "المنصورة، مصر (عن بعد)",
+        "description": "بناء وهندسة منصة تجارة إلكترونية ثنائية اللغة (إنجليزي/عربي RTL) لمتجر كتب وملصقات أطفال. تطوير واجهة مستخدم تعتمد على الرسوم المتحركة، ونظام دفع آمن، وملفات شخصية محمية للمستخدمين، بالإضافة إلى لوحة تحكم إدارية شاملة.",
         "tags": [
-          "Next.js",
-          "Go",
-          "Kubernetes",
-          "AWS"
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "Zustand",
+          "React-Hook-Form",
+          "Zod",
+          "Framer Motion"
         ]
       },
       {
         "id": "2",
-        "role": "مطور برمجيات متكامل",
-        "company": "Pixel & Code Studio",
-        "period": "2021 — 2023",
-        "location": "نيويورك",
-        "description": "أنجزت أكثر من 15 مشروع عميل من الاكتشاف حتى النشر. تخصصت في واجهات React عالية الأداء وواجهات API بـ Node.js.",
+        "role": "مطور واجهات أمامية (Frontend Developer)",
+        "company": "شركة Puiux",
+        "period": "نوفمبر 2025 — ديسمبر 2025",
+        "location": "المنصورة، مصر",
+        "description": "تطوير المكونات الأساسية لتطبيقات ويب قابلة للتوسع. تحسين الأداء باستخدام تقنيات SSR و SSG في Next.js، وتأمين التعامل مع النماذج (Forms) باستخدام Zod للتحقق من البيانات.",
         "tags": [
+          "Next.js",
+          "TypeScript",
           "React",
-          "Node.js",
-          "PostgreSQL",
-          "TypeScript"
+          "React-Query",
+          "React-hook-form",
+          "Zod",
+          "GSAP",
+          "REST APIs"
         ]
       },
       {
         "id": "3",
-        "role": "مطور واجهات أمامية",
-        "company": "Bright Digital Agency",
-        "period": "2020 — 2021",
-        "location": "أوستن، تكساس",
-        "description": "بنيت مواقع تسويقية متجاوبة وتجارب ويب تفاعلية لعملاء من قائمة Fortune 500. ريادة اعتماد مكتبات الرسوم المتحركة الحديثة.",
+        "role": "مطور واجهات أمامية (Frontend Developer)",
+        "company": "شركة Codebox",
+        "period": "فبراير 2024 — مايو 2025",
+        "location": "المنصورة، مصر",
+        "description": "بناء وصيانة أكثر من 30 مكون واجهة مستخدم (UI Components) قابلة لإعادة الاستخدام باستخدام Redux Toolkit. تحسين سرعة التطبيق من خلال تقنيات code splitting و lazy loading مع تقديم واجهات متجاوبة وبدقة بكسل مثالية.",
         "tags": [
-          "JavaScript",
-          "GSAP",
-          "Sass",
-          "WordPress"
-        ]
-      },
-      {
-        "id": "4",
-        "role": "مطور مبتدئ",
-        "company": "StartHub Labs",
-        "period": "2019 — 2020",
-        "location": "عن بُعد",
-        "description": "أول وظيفة هندسية. طورت أدوات داخلية ولوحات تحكم باستخدام Vue.js. تعلمت أسس التطوير الرشيق وخطوط CI/CD.",
-        "tags": [
-          "Vue.js",
-          "Python",
-          "MySQL",
-          "Jenkins"
+          "React",
+          "Redux Toolkit",
+          "RESTful APIs",
+          "Responsive Design",
+          "Performance Optimization"
         ]
       }
     ]

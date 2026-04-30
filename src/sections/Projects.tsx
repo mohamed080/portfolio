@@ -23,6 +23,7 @@ const PROJECT_GRADIENTS = [
 const PROJECT_IDS = ["0", "1", "2", "3", "4", "5"] as const;
 
 function ProjectCard({
+  image,
   title,
   description,
   tags,
@@ -31,7 +32,10 @@ function ProjectCard({
   gradient,
   liveLabel,
   codeLabel,
+  liveUrl,
+  repoUrl,
 }: {
+  image?: string;
   title: string;
   description: string;
   tags: string[];
@@ -40,6 +44,8 @@ function ProjectCard({
   gradient: string;
   liveLabel: string;
   codeLabel: string;
+  liveUrl?: string;
+  repoUrl?: string;
 }) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
@@ -78,14 +84,18 @@ function ProjectCard({
         }}
       >
         {/* Card image area */}
-        <div className="h-44 relative overflow-hidden flex-shrink-0" style={{ background: gradient }}>
+        <div className="h-50 relative overflow-hidden shrink-0" style={{ background: gradient }}>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-6xl font-black opacity-10 select-none" style={{ color: "var(--text-primary)" }}>
-              {title.slice(0, 2).toUpperCase()}
-            </span>
+            {image && !image.includes("items.") ? (
+              <img src={image} alt={title} className="w-full h-full object-cover object-top" />
+            ) : (
+              <span className="text-6xl font-black opacity-10 select-none" style={{ color: "var(--text-primary)" }}>
+                {title.slice(0, 2).toUpperCase()}
+              </span>
+            )}
           </div>
           {/* Category badge */}
-          <div className="absolute top-3 start-3">
+          <div className="absolute top-3 inset-s-3">
             <span
               className="text-xs px-2.5 py-1 rounded-full font-medium border"
               style={{ background: "var(--bg-secondary)", borderColor: "var(--border-color)", color: "var(--accent-violet)" }}
@@ -98,22 +108,41 @@ function ProjectCard({
             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4"
             style={{ background: "rgba(2,8,23,0.75)", backdropFilter: "blur(4px)" }}
           >
-            <a
-              href="#"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold hover:scale-105 transition-transform"
-              style={{ background: "var(--accent-violet)", color: "#fff" }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ExternalLink size={12} /> {liveLabel}
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold border hover:scale-105 transition-transform"
-              style={{ borderColor: "var(--border-color)", background: "var(--bg-glass)", color: "var(--text-primary)" }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FaGithub size={12} /> {codeLabel}
-            </a>
+            {liveUrl && !liveUrl.includes("items.") && (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold hover:scale-105 transition-transform"
+                style={{ background: "var(--accent-violet)", color: "#fff" }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink size={12} /> {liveLabel}
+              </a>
+            )}
+            {repoUrl && !repoUrl.includes("items.") && (
+              repoUrl.toLowerCase() === "private" ? (
+                <span
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold border cursor-not-allowed opacity-60"
+                  style={{ borderColor: "var(--border-color)", background: "var(--bg-glass)", color: "var(--text-secondary)" }}
+                  onClick={(e) => e.stopPropagation()}
+                  title="This repository is private"
+                >
+                  <FaGithub size={12} /> Private
+                </span>
+              ) : (
+                <a
+                  href={repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold border hover:scale-105 transition-transform"
+                  style={{ borderColor: "var(--border-color)", background: "var(--bg-glass)", color: "var(--text-primary)" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaGithub size={12} /> {codeLabel}
+                </a>
+              )
+            )}
           </div>
         </div>
 
@@ -168,7 +197,7 @@ export default function Projects() {
       style={{ background: "var(--bg-primary)" }}
     >
       <div
-        className="absolute start-0 bottom-0 w-96 h-96 rounded-full blur-[130px] opacity-10 pointer-events-none"
+        className="absolute inset-s-0 bottom-0 w-96 h-96 rounded-full blur-[130px] opacity-10 pointer-events-none"
         style={{ background: "var(--accent-cyan)" }}
       />
 
@@ -200,6 +229,7 @@ export default function Projects() {
             <ProjectCard
               key={id}
               index={i}
+              image={t(`items.${id}.image`)}
               title={t(`items.${id}.title`)}
               description={t(`items.${id}.description`)}
               tags={[
@@ -207,11 +237,16 @@ export default function Projects() {
                 t(`items.${id}.tags.1`),
                 t(`items.${id}.tags.2`),
                 t(`items.${id}.tags.3`),
-              ]}
+                t(`items.${id}.tags.4`),
+                t(`items.${id}.tags.5`),
+                t(`items.${id}.tags.6`),
+              ].filter(tag => tag && !tag.includes("items."))}
               category={t(`items.${id}.category`)}
               gradient={PROJECT_GRADIENTS[i % PROJECT_GRADIENTS.length]}
               liveLabel={t("view_live")}
               codeLabel={t("view_code")}
+              liveUrl={t(`items.${id}.liveUrl`)}
+              repoUrl={t(`items.${id}.repoUrl`)}
             />
           ))}
         </div>
