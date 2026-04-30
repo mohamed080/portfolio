@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type SkillItem = { name: string; level: number };
 
-type CategoryKey = "frontend" | "backend" | "tools";
+type CategoryKey = "frontend" | "styling" | "tools";
 
 function SkillBar({ skill, delay }: { skill: SkillItem; delay: number }) {
   const barRef = useRef<HTMLDivElement>(null);
@@ -69,7 +69,7 @@ export default function Skills() {
 
   const categories: { key: CategoryKey; label: string }[] = [
     { key: "frontend", label: t("categories.frontend") },
-    { key: "backend", label: t("categories.backend") },
+    { key: "styling", label: t("categories.styling") },
     { key: "tools", label: t("categories.tools") },
   ];
 
