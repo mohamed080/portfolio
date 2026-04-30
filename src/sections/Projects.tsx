@@ -32,6 +32,8 @@ function ProjectCard({
   gradient,
   liveLabel,
   codeLabel,
+  readMoreLabel,
+  showLessLabel,
   liveUrl,
   repoUrl,
 }: {
@@ -44,10 +46,16 @@ function ProjectCard({
   gradient: string;
   liveLabel: string;
   codeLabel: string;
+  readMoreLabel: string;
+  showLessLabel: string;
   liveUrl?: string;
   repoUrl?: string;
 }) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const maxLength = 140;
+  const isLongDescription = description.length > maxLength;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -149,7 +157,18 @@ function ProjectCard({
         {/* Card content */}
         <div className="p-5 flex flex-col gap-3 flex-1">
           <h3 className="font-bold text-lg" style={{ color: "var(--text-primary)" }}>{title}</h3>
-          <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--text-secondary)" }}>{description}</p>
+          <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--text-secondary)" }}>
+            {isExpanded || !isLongDescription ? description : `${description.slice(0, maxLength)}...`}
+            {isLongDescription && (
+              <button 
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsExpanded(!isExpanded); }}
+                className="mx-1 font-semibold hover:underline cursor-pointer"
+                style={{ color: "var(--accent-violet)" }}
+              >
+                {isExpanded ? showLessLabel : readMoreLabel}
+              </button>
+            )}
+          </p>
           <div className="flex flex-wrap gap-2 pt-1">
             {tags.map((tag) => (
               <span
@@ -237,6 +256,8 @@ export default function Projects() {
               gradient={PROJECT_GRADIENTS[i % PROJECT_GRADIENTS.length]}
               liveLabel={t("view_live")}
               codeLabel={t("view_code")}
+              readMoreLabel={t("read_more")}
+              showLessLabel={t("show_less")}
               liveUrl={t(`items.${id}.liveUrl`)}
               repoUrl={t(`items.${id}.repoUrl`)}
             />

@@ -36,6 +36,8 @@
     "subtitle": "A selection of work I'm proud of — from concept to deployment.",
     "view_live": "Live Demo",
     "view_code": "Source Code",
+    "read_more": "Read more",
+    "show_less": "Show less",
     "items": [
       {
         "id": "1",
