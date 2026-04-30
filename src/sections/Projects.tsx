@@ -232,15 +232,7 @@ export default function Projects() {
               image={t(`items.${id}.image`)}
               title={t(`items.${id}.title`)}
               description={t(`items.${id}.description`)}
-              tags={[
-                t(`items.${id}.tags.0`),
-                t(`items.${id}.tags.1`),
-                t(`items.${id}.tags.2`),
-                t(`items.${id}.tags.3`),
-                t(`items.${id}.tags.4`),
-                t(`items.${id}.tags.5`),
-                t(`items.${id}.tags.6`),
-              ].filter(tag => tag && !tag.includes("items."))}
+              tags={t.raw(`items.${id}.tags`) as string[]}
               category={t(`items.${id}.category`)}
               gradient={PROJECT_GRADIENTS[i % PROJECT_GRADIENTS.length]}
               liveLabel={t("view_live")}
