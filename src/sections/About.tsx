@@ -168,8 +168,9 @@ export default function About() {
               >
                 <Image
                   src="/images/profile.jpg"
-                  alt="Mohamed Ayman"
+                  alt="Mohamed Ayman — Full Stack Engineer & Frontend Developer"
                   fill
+                  sizes="(max-width: 640px) 288px, (max-width: 768px) 320px, 384px"
                   className="object-cover"
                   priority
                 />
