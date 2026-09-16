@@ -156,28 +156,38 @@
     "title": "Technologies I\nlive and breathe.",
     "subtitle": "A toolkit refined through years of real-world engineering.",
     "categories": {
-      "frontend": "Core & Frameworks",
-      "styling": "Styling & Animation",
-      "tools": "Libraries & Tools"
+      "frontend": "Frontend & UI",
+      "backend": "Backend & APIs",
+      "database": "Databases & ORMs",
+      "tools": "Tools & DevOps"
     },
     "items": {
       "frontend": [
         { "name": "React / Next.js", "level": 95 },
         { "name": "TypeScript", "level": 92 },
         { "name": "JavaScript (ES6+)", "level": 95 },
-        { "name": "HTML5 / CSS3", "level": 95 }
+        { "name": "HTML5 / CSS3", "level": 95 },
+        { "name": "Tailwind CSS", "level": 95 },
+        { "name": "MUI / Bootstrap", "level": 85 }
       ],
-      "styling": [
-        { "name": "Tailwind CSS", "level": 92 },
-        { "name": "Material UI (MUI)", "level": 85 },
-        { "name": "Bootstrap 5", "level": 90 },
-        { "name": "GSAP / Framer Motion", "level": 85 }
+      "backend": [
+        { "name": "Node.js", "level": 85 },
+        { "name": "Express.js", "level": 85 },
+        { "name": "RESTful APIs", "level": 90 },
+        { "name": "Auth (JWT, OAuth)", "level": 88 },
+        { "name": "Zod Validation", "level": 90 }
+      ],
+      "database": [
+        { "name": "MongoDB", "level": 85 },
+        { "name": "Mongoose", "level": 85 },
+        { "name": "PostgreSQL", "level": 75 },
+        { "name": "Prisma", "level": 70 }
       ],
       "tools": [
+        { "name": "Git & GitHub", "level": 90 },
         { "name": "Redux / Zustand", "level": 90 },
         { "name": "React Query", "level": 88 },
-        { "name": "React Hook Form / Zod", "level": 85 },
-        { "name": "Git & GitHub", "level": 90 }
+        { "name": "Postman / Swagger", "level": 85 }
       ]
     }
   },
