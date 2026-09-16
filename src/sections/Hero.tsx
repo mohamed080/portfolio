@@ -294,7 +294,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
-        className="absolute bottom-8 start-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 cursor-pointer"
+        className="absolute bottom-8 inset-s-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 cursor-pointer"
         onClick={scrollToAbout}
       >
         <span className="text-xs tracking-[0.2em] uppercase" style={{ color: "var(--text-muted)" }}>

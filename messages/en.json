@@ -44,6 +44,10 @@
     "view_code": "Source Code",
     "read_more": "Read more",
     "show_less": "Show less",
+    "filter_all": "All",
+    "filter_frontend": "Frontend",
+    "filter_fullstack": "Full-Stack",
+    "filter_backend": "Backend",
     "items": [
       {
         "id": "1",
@@ -124,6 +128,26 @@
         "category": "Frontend",
         "liveUrl": "https://masfer.netlify.app/",
         "repoUrl": "private"
+      },
+      {
+        "id": "9",
+        "title": "Task Management App",
+        "image": "/images/task-management.png",
+        "description": "A full-stack MERN task management application with secure authentication, per-user task isolation, CRUD operations, search, filtering, pagination, and robust API validation. Built with a TypeScript Express backend and a responsive React frontend.",
+        "tags": ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "JWT", "Zod", "TanStack Query", "Zustand", "Tailwind CSS"],
+        "category": "Full Stack",
+        "liveUrl": "https://task-management-client-rosy.vercel.app",
+        "repoUrl": "https://github.com/mohamed080/task-management"
+      },
+      {
+        "id": "10",
+        "title": "CourseHub API",
+        "image": "",
+        "description": "A production-ready REST API for an online learning platform with multi-role authentication, course and enrollment management, lesson comments, certificates, reviews, wishlists, instructor workflows, analytics, and integrated payment and media services.",
+        "tags": ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Cloudinary", "Paymob", "Nodemailer", "Swagger", "Railway"],
+        "category": "Backend",
+        "liveUrl": "",
+        "repoUrl": "https://github.com/mohamed080/coursehub-api"
       }
     ]
   },
