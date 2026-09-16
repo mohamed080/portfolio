@@ -56,6 +56,10 @@
     "view_code": "الكود المصدري",
     "read_more": "اقرأ المزيد",
     "show_less": "عرض أقل",
+    "filter_all": "الكل",
+    "filter_frontend": "واجهة أمامية",
+    "filter_fullstack": "Full-Stack",
+    "filter_backend": "خلفية",
     "items": [
       {
         "id": "1",
@@ -144,6 +148,26 @@
         "category": "واجهة أمامية",
         "liveUrl": "https://masfer.netlify.app/",
         "repoUrl": "private"
+      },
+      {
+        "id": "9",
+        "title": "Task Management App - تطبيق إدارة المهام",
+        "image": "/images/task-management.png",
+        "description": "تطبيق إدارة مهام متكامل (MERN) بمصادقة آمنة، وعزل المهام لكل مستخدم، وعمليات CRUD، وبحث وتصفية وتصفح، مع تحقق صارم من صحة البيانات. مبني بواجهة خلفية Express بلغة TypeScript وواجهة أمامية React متجاوبة.",
+        "tags": ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "JWT", "Zod", "TanStack Query", "Zustand", "Tailwind CSS"],
+        "category": "Full Stack",
+        "liveUrl": "https://task-management-client-rosy.vercel.app",
+        "repoUrl": "https://github.com/mohamed080/task-management"
+      },
+      {
+        "id": "10",
+        "title": "CourseHub API - واجهة منصة تعليمية",
+        "image": "",
+        "description": "REST API جاهزة للإنتاج لمنصة تعلم إلكتروني، تتضمن مصادقة متعددة الأدوار، وإدارة الدورات والتسجيلات، وتعليقات الدروس، والشهادات، والمراجعات، وقوائم الأمنيات، وسير المدرسين، والتحليلات، وخدمات الدفع والوسائط.",
+        "tags": ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Cloudinary", "Paymob", "Nodemailer", "Swagger", "Railway"],
+        "category": "خلفية",
+        "liveUrl": "",
+        "repoUrl": "https://github.com/mohamed080/coursehub-api"
       }
     ]
   },

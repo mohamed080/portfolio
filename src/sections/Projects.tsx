@@ -6,8 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +19,9 @@ const PROJECT_GRADIENTS = [
   "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(6,182,212,0.2))",
 ];
 
-const PROJECT_IDS = ["0", "1", "2", "3", "4", "5", "6", "7"] as const;
+const PROJECT_IDS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"] as const;
+
+type FilterKey = "all" | "frontend" | "fullstack" | "backend";
 
 function ProjectCard({
   image,
@@ -66,10 +67,11 @@ function ProjectCard({
 
   return (
     <motion.div
+      layout
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 30, scale: 0.95 }}
+      transition={{ duration: 0.4, delay: index * 0.06, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div
         className="group relative rounded-2xl border overflow-hidden cursor-pointer h-full flex flex-col"
@@ -160,7 +162,7 @@ function ProjectCard({
           <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--text-secondary)" }}>
             {isExpanded || !isLongDescription ? description : `${description.slice(0, maxLength)}...`}
             {isLongDescription && (
-              <button 
+              <button
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsExpanded(!isExpanded); }}
                 className="mx-1 font-semibold hover:underline cursor-pointer"
                 style={{ color: "var(--accent-violet)" }}
@@ -190,9 +192,19 @@ function ProjectCard({
   );
 }
 
+// Normalize any localized category string → canonical FilterKey
+function toFilterKey(category: string): FilterKey {
+  const n = category.toLowerCase().replace(/[- ]/g, "");
+  if (n.includes("front") || n.includes("أمامية")) return "frontend";
+  if (n.includes("full") || n.includes("stack")) return "fullstack";
+  if (n.includes("back") || n.includes("خلفية")) return "backend";
+  return "frontend";
+}
+
 export default function Projects() {
   const t = useTranslations("projects");
   const sectionRef = useRef<HTMLElement>(null);
+  const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -208,6 +220,38 @@ export default function Projects() {
     return () => ctx.revert();
   }, []);
 
+  const filters: { key: FilterKey; label: string }[] = [
+    { key: "all",       label: t("filter_all") },
+    { key: "frontend",  label: t("filter_frontend") },
+    { key: "fullstack", label: t("filter_fullstack") },
+    { key: "backend",   label: t("filter_backend") },
+  ];
+
+  const handleFilterChange = (key: FilterKey) => {
+    setActiveFilter(key);
+    if (sectionRef.current) {
+      const topOffset = sectionRef.current.getBoundingClientRect().top + window.scrollY + 370;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
+    }
+  };
+
+  const allProjects = PROJECT_IDS.map((id, i) => ({
+    id,
+    index: i,
+    image: t(`items.${id}.image`),
+    title: t(`items.${id}.title`),
+    description: t(`items.${id}.description`),
+    tags: t.raw(`items.${id}.tags`) as string[],
+    category: t(`items.${id}.category`),
+    liveUrl: t(`items.${id}.liveUrl`),
+    repoUrl: t(`items.${id}.repoUrl`),
+    gradient: PROJECT_GRADIENTS[i % PROJECT_GRADIENTS.length],
+  }));
+
+  const filtered = activeFilter === "all"
+    ? allProjects
+    : allProjects.filter((p) => toFilterKey(p.category) === activeFilter);
+
   return (
     <section
       ref={sectionRef}
@@ -222,7 +266,7 @@ export default function Projects() {
 
       <div className="container-custom">
         {/* Header */}
-        <div className="projects-header mb-16 max-w-2xl">
+        <div className="projects-header mb-10 max-w-2xl">
           <span
             className="inline-flex items-center text-xs font-semibold tracking-[0.2em] uppercase mb-4 px-3 py-1.5 rounded-full border"
             style={{ color: "var(--accent-violet)", borderColor: "var(--border-color)", background: "var(--bg-glass)" }}
@@ -242,28 +286,62 @@ export default function Projects() {
           <p className="text-lg" style={{ color: "var(--text-secondary)" }}>{t("subtitle")}</p>
         </div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROJECT_IDS.map((id, i) => (
-            <ProjectCard
-              key={id}
-              index={i}
-              image={t(`items.${id}.image`)}
-              title={t(`items.${id}.title`)}
-              description={t(`items.${id}.description`)}
-              tags={t.raw(`items.${id}.tags`) as string[]}
-              category={t(`items.${id}.category`)}
-              gradient={PROJECT_GRADIENTS[i % PROJECT_GRADIENTS.length]}
-              liveLabel={t("view_live")}
-              codeLabel={t("view_code")}
-              readMoreLabel={t("read_more")}
-              showLessLabel={t("show_less")}
-              liveUrl={t(`items.${id}.liveUrl`)}
-              repoUrl={t(`items.${id}.repoUrl`)}
-            />
-          ))}
+        {/* Filter tabs */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          {filters.map(({ key, label }) => {
+            const isActive = activeFilter === key;
+            return (
+              <button
+                key={key}
+                onClick={() => handleFilterChange(key)}
+                className="relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200"
+                style={{
+                  background: isActive ? "rgba(139,92,246,0.15)" : "var(--bg-glass)",
+                  color: isActive ? "var(--accent-violet)" : "var(--text-secondary)",
+                  border: `1px solid ${isActive ? "rgba(139,92,246,0.4)" : "var(--border-color)"}`,
+                  boxShadow: isActive ? "0 0 16px rgba(139,92,246,0.15)" : "none",
+                  transform: isActive ? "scale(1.04)" : "scale(1)",
+                }}
+              >
+                {label}
+                {isActive && (
+                  <motion.span
+                    layoutId="filter-indicator"
+                    className="absolute bottom-0 inset-s-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full"
+                    style={{ background: "var(--accent-violet)" }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </button>
+            );
+          })}
         </div>
+
+        {/* Grid */}
+        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((p, visibleIndex) => (
+              <ProjectCard
+                key={p.id}
+                index={visibleIndex}
+                image={p.image}
+                title={p.title}
+                description={p.description}
+                tags={p.tags}
+                category={p.category}
+                gradient={p.gradient}
+                liveLabel={t("view_live")}
+                codeLabel={t("view_code")}
+                readMoreLabel={t("read_more")}
+                showLessLabel={t("show_less")}
+                liveUrl={p.liveUrl}
+                repoUrl={p.repoUrl}
+              />
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
 }
+
