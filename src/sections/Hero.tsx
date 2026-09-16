@@ -3,12 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { gsap } from "gsap";
-import { ArrowDown, Download, Sparkles } from "lucide-react";
-import Link from "next/link";
-
-const ROLES_EN = ["Full Stack Engineer", "UI/UX Enthusiast", "Open Source Contributor", "Problem Solver"];
-const ROLES_AR = ["مهندس برمجيات متكامل", "مطور واجهات وتجارب", "مساهم في المصدر المفتوح", "حلّال مشكلات"];
-
+import { ArrowDown, ChevronDown, Download, Sparkles } from "lucide-react";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -23,6 +18,8 @@ export default function Hero() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [cvDropdownOpen, setCvDropdownOpen] = useState(false);
+  const cvDropdownRef = useRef<HTMLDivElement>(null);
 
   // Raw roles from translation
   const roles = [t("roles.0"), t("roles.1"), t("roles.2")];
@@ -74,6 +71,17 @@ export default function Hero() {
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (cvDropdownRef.current && !cvDropdownRef.current.contains(e.target as Node)) {
+        setCvDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
 
   return (
     <section
@@ -210,19 +218,75 @@ export default function Hero() {
               </span>
             </button>
 
-            <Link
-              href="/cv/Mohamed Ayman - Frontend_Developer.pdf"
-              className="group flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm border transition-all duration-300 hover:scale-105"
-              style={{
-                borderColor: "var(--border-color)",
-                background: "var(--bg-glass)",
-                color: "var(--text-primary)",
-              }}
-              download
-            >
-              <Download size={15} />
-              {t("cta_secondary")}
-            </Link>
+            {/* CV Dropdown */}
+            <div ref={cvDropdownRef} className="relative">
+              <button
+                onClick={() => setCvDropdownOpen((o) => !o)}
+                className="group flex items-center gap-2 px-7 py-3.5 font-semibold text-sm border transition-all duration-300 hover:scale-105 text-primary rounded-xl"
+                style={{
+                  borderColor: "var(--border-color)",
+                  background: "var(--bg-glass)",
+                }}
+              >
+                <Download size={15} />
+                {t("cta_secondary")}
+                <ChevronDown
+                  size={13}
+                  className="transition-transform duration-200"
+                  style={{ transform: cvDropdownOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+                />
+              </button>
+
+              {/* Dropdown menu */}
+              {cvDropdownOpen && (
+                <div
+                  className="absolute top-full mt-2 inset-s-0 min-w-full rounded-xl border overflow-hidden z-50"
+                  style={{
+                    background: "var(--bg-card)",
+                    borderColor: "var(--border-color)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+                  }}
+                >
+                  <a
+                    href="/cv/Mohamed Ayman - Frontend_Developer.pdf"
+                    download
+                    onClick={() => setCvDropdownOpen(false)}
+                    className="flex items-center gap-3 px-5 py-3 text-sm font-medium transition-colors duration-150"
+                    style={{ color: "var(--text-secondary)" }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "var(--bg-glass)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "var(--accent-violet)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-secondary)";
+                    }}
+                  >
+                    <Download size={13} />
+                    {t("cv_frontend")}
+                  </a>
+                  <div style={{ height: "1px", background: "var(--border-color)" }} />
+                  <a
+                    href="/cv/Mohamed Ayman - Full-Stack_Developer.pdf"
+                    download
+                    onClick={() => setCvDropdownOpen(false)}
+                    className="flex items-center gap-3 px-5 py-3 text-sm font-medium transition-colors duration-150"
+                    style={{ color: "var(--text-secondary)" }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "var(--bg-glass)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "var(--accent-violet)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-secondary)";
+                    }}
+                  >
+                    <Download size={13} />
+                    {t("cv_fullstack")}
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
