@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type SkillItem = { name: string; level: number };
 
-type CategoryKey = "frontend" | "styling" | "tools";
+type CategoryKey = "frontend" | "backend" | "database" | "tools";
 
 function SkillBar({ skill, delay }: { skill: SkillItem; delay: number }) {
   const barRef = useRef<HTMLDivElement>(null);
@@ -69,7 +69,8 @@ export default function Skills() {
 
   const categories: { key: CategoryKey; label: string }[] = [
     { key: "frontend", label: t("categories.frontend") },
-    { key: "styling", label: t("categories.styling") },
+    { key: "backend", label: t("categories.backend") },
+    { key: "database", label: t("categories.database") },
     { key: "tools", label: t("categories.tools") },
   ];
 
@@ -178,9 +179,9 @@ export default function Skills() {
           {/* Bottom decoration */}
           <div className="mt-10 pt-8 border-t grid grid-cols-3 gap-4 text-center" style={{ borderColor: "var(--border-color)" }}>
             {[
-              { label: "React Ecosystem", value: "Expert" },
-              { label: "System Design", value: "Advanced" },
-              { label: "Open Source", value: "Active" },
+              { label: "Frontend & UI", value: "Expert" },
+              { label: "Backend & APIs", value: "Advanced" },
+              { label: "Architecture", value: "Solid" },
             ].map(({ label, value }) => (
               <div key={label}>
                 <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>{label}</p>
