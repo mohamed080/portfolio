@@ -11,10 +11,16 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Mohamed Ayman",
-    "roles": ["Frontend Developer", "Open Source Contributor", "Problem Solver"],
-    "tagline": "I craft digital experiences that live at the intersection of design and engineering.",
+    "roles": [
+      "Full-Stack Developer",
+      "React.js & Next.js Developer",
+      "Node.js & Express.js Developer"
+    ],
+    "tagline": "I build modern web applications from responsive interfaces to scalable APIs and backend systems.",
     "cta_primary": "View My Work",
-    "cta_secondary": "Download Resume",
+    "cta_secondary": "Download CV",
+    "cv_frontend": "Frontend CV",
+    "cv_fullstack": "Full-Stack CV",
     "scroll": "Scroll to explore"
   },
   "about": {
