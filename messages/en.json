@@ -26,15 +26,15 @@
   "about": {
     "badge": "About Me",
     "title": "Turning complex\nproblems into elegant\nsolutions.",
-    "bio1": "I'm a Frontend Developer with 1.5+ years of experience crafting responsive, performant web applications. My passion lies in creating seamless user experiences through clean, maintainable code and modern design principles.",
-    "bio2": "When I'm not building interfaces or optimizing performance, you'll find me contributing to open source, exploring emerging frontend technologies, or sharing knowledge with fellow developers.",
+    "bio1": "I'm a Full-Stack Developer with 1.5+ years of experience building end-to-end web applications — from pixel-perfect, responsive interfaces to scalable REST APIs and backend systems. My passion lies in crafting seamless user experiences backed by clean, maintainable code.",
+    "bio2": "When I'm not shipping features, you'll find me exploring emerging technologies across the stack — whether it's a new React pattern, a Node.js optimization, or diving into databases and DevOps tooling to make systems faster and more reliable.",
     "stats": {
       "projects": { "value": "15+", "label": "Projects Delivered" },
       "years": { "value": "1.5+", "label": "Years Experience" },
       "clients": { "value": "10+", "label": "Happy Clients" },
       "commits": { "value": "500+", "label": "GitHub Commits" }
     },
-    "image_alt": "Mohamed Ayman — Frontend Developer"
+    "image_alt": "Mohamed Ayman — Full-Stack Developer"
   },
   "projects": {
     "badge": "Featured Work",

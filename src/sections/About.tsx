@@ -104,7 +104,7 @@ export default function About() {
     >
       {/* Background accent */}
       <div
-        className="absolute end-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[120px] opacity-10 pointer-events-none"
+        className="absolute inset-e-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[120px] opacity-10 pointer-events-none"
         style={{ background: "var(--accent-violet)" }}
       />
 
@@ -187,7 +187,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit LinkedIn profile"
-                className="absolute -top-4 -start-4 glass p-3 rounded-xl border transition-all duration-300 hover:border-cyan-500/60 hover:scale-110 hover:-translate-x-1 group float-1"
+                className="absolute -top-4 -inset-s-4 glass p-3 rounded-xl border transition-all duration-300 hover:border-cyan-500/60 hover:scale-110 hover:-translate-x-1 group float-1"
                 style={{ borderColor: "var(--border-color)" }}
               >
                 <FaLinkedin
@@ -201,7 +201,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit GitHub profile"
-                className="absolute -bottom-4 -end-4 glass p-3 rounded-xl border transition-all duration-300 hover:border-cyan-500/60 hover:scale-110 hover:-translate-x-1 group float-2"
+                className="absolute -bottom-4 -inset-e-4 glass p-3 rounded-xl border transition-all duration-300 hover:border-cyan-500/60 hover:scale-110 hover:-translate-x-1 group float-2"
                 style={{ borderColor: "var(--border-color)" }}
               >
                 <FaGithub
@@ -212,13 +212,13 @@ export default function About() {
               </a>
               {/* Floating badges */}
               <div
-                className="absolute -top-4 -end-4 glass px-4 py-2 rounded-xl border text-xs font-semibold float-1"
+                className="absolute -top-4 -inset-e-4 glass px-4 py-2 rounded-xl border text-xs font-semibold float-1"
                 style={{ borderColor: "var(--border-glow)", color: "var(--accent-violet)" }}
               >
                 ✦ Available for hire
               </div>
               <div
-                className="absolute -bottom-4 -start-4 glass px-4 py-2 rounded-xl border text-xs font-semibold float-2"
+                className="absolute -bottom-4 -inset-s-4 glass px-4 py-2 rounded-xl border text-xs font-semibold float-2"
                 style={{ borderColor: "var(--border-glow)", color: "var(--accent-violet)" }}
               >
                 1.5+ Years XP
