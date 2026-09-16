@@ -60,18 +60,33 @@
         "title": "Taleora",
         "image": "/images/taleora.png",
         "description": "منصة تجارة إلكترونية متطورة ثنائية اللغة (عربي/إنجليزي) لقصص الأطفال. تتميز بواجهة مستخدم تدعم الاتجاه من اليمين لليسام (RTL)، وربط آمن مع Stripe، ولوحة تحكم إدارية شاملة لإدارة المخزون والسجلات.",
-        "tags": [
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS v4",
-          "Zustand"
-        ],
+        "tags": ["Next.js", "TypeScript", "Tailwind CSS v4", "Zustand"],
         "category": "واجهة أمامية",
         "liveUrl": "https://taleora-mu.vercel.app/en",
         "repoUrl": "private"
       },
       {
         "id": "2",
+        "title": "Rento - منصة تأجير وبيع السيارات",
+        "image": "/images/rento.webp",
+        "description": "منصة متكاملة لتأجير وبيع السيارات تم تطويرها ضمن مشروع جماعي في NTI، تربط بين العملاء والتجار والمديرين. كنت مسؤولًا عن تطوير الواجهة الأمامية، بما في ذلك سير العمل حسب الصلاحيات، والمسارات المحمية، وإدارة الحجوزات والمشتريات، ولوحات التحكم، ودعم اللغتين العربية والإنجليزية مع RTL/LTR.",
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "React Query", "Redux Toolkit", "Zod", "next-intl"],
+        "category": "واجهة أمامية",
+        "liveUrl": "https://rento-frontend-rho.vercel.app/en",
+        "repoUrl": "https://github.com/Cars-Rental/CarRental1"
+      },
+      {
+        "id": "3",
+        "title": "TKH University - منصة الجامعة المدعومة بنظام CMS",
+        "image": "/images/tkh-university.webp",
+        "description": "منصة جامعية متكاملة مدعومة بالكامل بنظام Payload CMS، تتيح إدارة جميع أقسام الموقع ومحتواه من خلال لوحة تحكم دون الحاجة إلى تعديل الكود. تم تطويرها باستخدام Next.js 16 وReact Server Components مع دعم ISR وإعادة التحقق عند تحديث المحتوى، وإدارة الوسائط، وتحسين SEO.",
+        "tags": ["Next.js", "React", "TypeScript", "Payload CMS", "Tailwind CSS v4", "MongoDB", "GSAP", "React Hook Form", "Zod"],
+        "category": "Full Stack",
+        "liveUrl": "https://tkh-university-landing.vercel.app/",
+        "repoUrl": "https://github.com/mohamed080/tkh-university-landing"
+      },
+      {
+        "id": "4",
         "title": "شارك - منصة بطاقات العمل الرقمية (SaaS)",
         "image": "/images/sharek.png",
         "description": "منصة (SaaS) لإنشاء وإدارة ومشاركة بطاقات العمل الرقمية الذكية مع ميزات لوحة تحكم للشركات.",
@@ -81,7 +96,7 @@
         "repoUrl": "private"
       },
       {
-        "id": "3",
+        "id": "5",
         "title": "DentalSaaS - نظام إدارة عيادات الأسنان",
         "image": "/images/dentalSaaS.png",
         "description": "منصة SaaS متكاملة لعيادات الأسنان تقدم حلاً شاملاً للإدارة. تتميز بمخطط تفاعلي للأسنان، وجدولة ذكية للمواعيد، ومتابعة آلية للمرضى عبر واتساب والرسائل القصيرة، وتتبع مالي شامل.",
@@ -99,9 +114,9 @@
         "repoUrl": "private"
       },
       {
-        "id": "4",
+        "id": "6",
         "title": "EduPlatform - منصة التحضير لاختبارات SAT و ACT",
-        "image":"/images/edu.png",
+        "image": "/images/edu.png",
         "description": "منصة تعليمية شاملة للتحضير للاختبارات المعيارية (SAT, EST & ACT). تتميز باختبارات تدريبية مؤقتة مع تكامل آلة حاسبة Desmos، ومسابقات تفاعلية مع مواجهات مباشرة، وتحليلات تفصيلية للدرجات، ودورات تعليمية بالفيديو، ولوحة تحكم إدارية كاملة لإدارة المحتوى والاشتراكات والوسائط.",
         "tags": ["React 19", "React Router", "MUI", "Bootstrap 5", "ApexCharts", "KaTeX", "Swiper", "jsPDF"],
         "category": "واجهة أمامية",
@@ -109,25 +124,17 @@
         "repoUrl": "https://github.com/mohamed080/educational-platform"
       },
       {
-        "id": "5",
+        "id": "7",
         "title": "FundX - منصة التمويل الجماعي والاستثمار",
         "image": "/images/fundx.png",
         "description": "منصة شاملة للتمويل الجماعي تربط المستثمرين بالشركات الناشئة الواعدة. تتميز بمحافظ استثمارية تفاعلية، تفاوض على الحصص في الوقت الفعلي، استكشاف مخصص للمشاريع بناءً على تفضيلات المستخدم، وتقارير مالية قابلة للتحميل.",
-       "tags": [
-          "React 19",
-          "React Router",
-          "React Query",
-          "Chart.js",
-          "Bootstrap 5",
-          "jsPDF"
-        ],
+        "tags": ["React 19", "React Router", "React Query", "Chart.js", "Bootstrap 5", "jsPDF"],
         "category": "واجهة أمامية",
         "liveUrl": "https://graduation-projec.netlify.app/",
         "repoUrl": "https://github.com/mohamed080/graduation-project"
-      
       },
       {
-        "id": "6",
+        "id": "8",
         "title": "مسفر العاطفي - موقع مكتب محاماة",
         "image": "/images/masfer.png",
         "description": "موقع إلكتروني احترافي متعدد الصفحات باللغة العربية (RTL) لمكتب محاماة رائد في الرياض. يتميز ببطل سينمائي مع خلفية فيديو، وحركات تمرير سلسة (AOS)، وعرض تفاعلي للخدمات، وكاروسيل مدونة بتقنية Swiper، وقسم تعريفي بالمؤسس، ونظام تواصل كامل مع حجز الاستشارات.",

@@ -20,7 +20,7 @@ const PROJECT_GRADIENTS = [
   "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(6,182,212,0.2))",
 ];
 
-const PROJECT_IDS = ["0", "1", "2", "3", "4", "5"] as const;
+const PROJECT_IDS = ["0", "1", "2", "3", "4", "5", "6", "7"] as const;
 
 function ProjectCard({
   image,

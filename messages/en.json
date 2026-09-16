@@ -51,6 +51,26 @@
       },
       {
         "id": "2",
+        "title": "Rento - Car Rental & Marketplace",
+        "image": "/images/rento.webp",
+        "description": "A full-stack car rental and marketplace platform built as an NTI team project, connecting customers, traders, and admins. I was responsible for the frontend, implementing role-based workflows, protected routes, booking and purchase management, dashboards, and Arabic/English RTL/LTR localization.",
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "React Query", "Redux Toolkit", "Zod", "next-intl"],
+        "category": "Frontend",
+        "liveUrl": "https://rento-frontend-rho.vercel.app/en",
+        "repoUrl": "https://github.com/Cars-Rental/CarRental1"
+      },
+      {
+        "id": "3",
+        "title": "TKH University - CMS-Driven University Landing Page",
+        "image": "/images/tkh-university.webp",
+        "description": "A fully CMS-driven university landing page built with Next.js 16 and Payload CMS. All website sections and content are managed through the Payload admin panel without hardcoded frontend content, with ISR and on-demand revalidation for fast, up-to-date pages, dynamic SEO metadata, media management, and responsive interactive UI.",
+        "tags": ["Next.js", "React", "TypeScript", "Payload CMS", "Tailwind CSS v4", "MongoDB", "GSAP", "React Hook Form", "Zod"],
+        "category": "Full Stack",
+        "liveUrl": "https://tkh-university-landing.vercel.app/",
+        "repoUrl": "https://github.com/mohamed080/tkh-university-landing"
+      },
+      {
+        "id": "4",
         "title": "Sharek - Digital Business Cards SaaS",
         "image": "/images/sharek.png",
         "description": "A SaaS platform for creating, managing, and sharing smart digital business cards with corporate dashboard features.",
@@ -60,7 +80,7 @@
         "repoUrl": "private"
       },
       {
-        "id": "3",
+        "id": "5",
         "title": "DentalSaaS - Clinic Management System",
         "image": "/images/dentalSaaS.png",
         "description": "A scalable SaaS platform for dental clinics offering an all-in-one management solution. It features interactive dental charting, smart appointment scheduling, automated patient follow-ups via WhatsApp/SMS, and comprehensive financial tracking.",
@@ -70,7 +90,7 @@
         "repoUrl": "private"
       },
       {
-        "id": "4",
+        "id": "6",
         "title": "EduPlatform - Digital SAT & ACT Prep",
         "image":"/images/edu.png",
         "description": "A comprehensive educational platform for standardized test preparation (SAT, EST & ACT). Features timed practice tests with Desmos calculator integration, interactive quiz competitions with real-time VS matchmaking, score analytics with detailed breakdowns, video-based learning courses, and a full admin dashboard for content, subscription, and media management.",
@@ -80,7 +100,7 @@
         "repoUrl": "https://github.com/mohamed080/educational-platform"
       },
       {
-        "id": "5",
+        "id": "7",
         "title": "FundX - Investment & Equity Crowdfunding",
         "description": "A comprehensive equity crowdfunding platform that connects investors with promising startups. Features interactive investment portfolios, real-time equity negotiation, customized project discovery based on user preferences, and downloadable financial reports.",
         "image": "/images/fundx.png",
@@ -90,7 +110,7 @@
         "repoUrl": "https://github.com/mohamed080/graduation-project"
       },
       {
-        "id": "6",
+        "id": "8",
         "title": "Masfer Al-Atifi - Law Firm Website",
         "image": "/images/masfer.png",
         "description": "A premium, multi-page Arabic (RTL) website for a leading law firm in Riyadh. Features a cinematic hero with video background, smooth AOS scroll animations, an interactive services showcase, a Swiper-powered blog carousel, founder spotlight, and a full contact system with consultation booking.",
