@@ -76,8 +76,18 @@
         "title": "Rento - منصة تأجير وبيع السيارات",
         "image": "/images/rento.webp",
         "description": "منصة متكاملة لتأجير وبيع السيارات تم تطويرها ضمن مشروع جماعي في NTI، تربط بين العملاء والتجار والمديرين. كنت مسؤولًا عن تطوير الواجهة الأمامية، بما في ذلك سير العمل حسب الصلاحيات، والمسارات المحمية، وإدارة الحجوزات والمشتريات، ولوحات التحكم، ودعم اللغتين العربية والإنجليزية مع RTL/LTR.",
-        "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "React Query", "Redux Toolkit", "Zod", "next-intl"],
-        "category": "واجهة أمامية",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "React Query",
+          "Redux Toolkit",
+          "Zod",
+          "next-intl"
+        ],
+        "category": "Full Stack",
         "liveUrl": "https://rento-frontend-rho.vercel.app/en",
         "repoUrl": "https://github.com/Cars-Rental/CarRental1"
       },
@@ -86,7 +96,17 @@
         "title": "TKH University - منصة الجامعة المدعومة بنظام CMS",
         "image": "/images/tkh-university.webp",
         "description": "منصة جامعية متكاملة مدعومة بالكامل بنظام Payload CMS، تتيح إدارة جميع أقسام الموقع ومحتواه من خلال لوحة تحكم دون الحاجة إلى تعديل الكود. تم تطويرها باستخدام Next.js 16 وReact Server Components مع دعم ISR وإعادة التحقق عند تحديث المحتوى، وإدارة الوسائط، وتحسين SEO.",
-        "tags": ["Next.js", "React", "TypeScript", "Payload CMS", "Tailwind CSS v4", "MongoDB", "GSAP", "React Hook Form", "Zod"],
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Payload CMS",
+          "Tailwind CSS v4",
+          "MongoDB",
+          "GSAP",
+          "React Hook Form",
+          "Zod"
+        ],
         "category": "Full Stack",
         "liveUrl": "https://tkh-university-landing.vercel.app/",
         "repoUrl": "https://github.com/mohamed080/tkh-university-landing"
@@ -96,7 +116,15 @@
         "title": "شارك - منصة بطاقات العمل الرقمية (SaaS)",
         "image": "/images/sharek.png",
         "description": "منصة (SaaS) لإنشاء وإدارة ومشاركة بطاقات العمل الرقمية الذكية مع ميزات لوحة تحكم للشركات.",
-        "tags": ["React 19", "Tailwind CSS v4", "Axios", "Socket.io","react-colorful","react-phone-input-2", "swiper"],
+        "tags": [
+          "React 19",
+          "Tailwind CSS v4",
+          "Axios",
+          "Socket.io",
+          "react-colorful",
+          "react-phone-input-2",
+          "swiper"
+        ],
         "category": "واجهة أمامية",
         "liveUrl": "https://sharke1.netlify.app",
         "repoUrl": "private"
@@ -124,7 +152,16 @@
         "title": "EduPlatform - منصة التحضير لاختبارات SAT و ACT",
         "image": "/images/edu.png",
         "description": "منصة تعليمية شاملة للتحضير للاختبارات المعيارية (SAT, EST & ACT). تتميز باختبارات تدريبية مؤقتة مع تكامل آلة حاسبة Desmos، ومسابقات تفاعلية مع مواجهات مباشرة، وتحليلات تفصيلية للدرجات، ودورات تعليمية بالفيديو، ولوحة تحكم إدارية كاملة لإدارة المحتوى والاشتراكات والوسائط.",
-        "tags": ["React 19", "React Router", "MUI", "Bootstrap 5", "ApexCharts", "KaTeX", "Swiper", "jsPDF"],
+        "tags": [
+          "React 19",
+          "React Router",
+          "MUI",
+          "Bootstrap 5",
+          "ApexCharts",
+          "KaTeX",
+          "Swiper",
+          "jsPDF"
+        ],
         "category": "واجهة أمامية",
         "liveUrl": "https://educational-platform.netlify.app",
         "repoUrl": "https://github.com/mohamed080/educational-platform"
@@ -134,7 +171,14 @@
         "title": "FundX - منصة التمويل الجماعي والاستثمار",
         "image": "/images/fundx.png",
         "description": "منصة شاملة للتمويل الجماعي تربط المستثمرين بالشركات الناشئة الواعدة. تتميز بمحافظ استثمارية تفاعلية، تفاوض على الحصص في الوقت الفعلي، استكشاف مخصص للمشاريع بناءً على تفضيلات المستخدم، وتقارير مالية قابلة للتحميل.",
-        "tags": ["React 19", "React Router", "React Query", "Chart.js", "Bootstrap 5", "jsPDF"],
+        "tags": [
+          "React 19",
+          "React Router",
+          "React Query",
+          "Chart.js",
+          "Bootstrap 5",
+          "jsPDF"
+        ],
         "category": "واجهة أمامية",
         "liveUrl": "https://graduation-projec.netlify.app/",
         "repoUrl": "https://github.com/mohamed080/graduation-project"
@@ -144,7 +188,14 @@
         "title": "مسفر العاطفي - موقع مكتب محاماة",
         "image": "/images/masfer.png",
         "description": "موقع إلكتروني احترافي متعدد الصفحات باللغة العربية (RTL) لمكتب محاماة رائد في الرياض. يتميز ببطل سينمائي مع خلفية فيديو، وحركات تمرير سلسة (AOS)، وعرض تفاعلي للخدمات، وكاروسيل مدونة بتقنية Swiper، وقسم تعريفي بالمؤسس، ونظام تواصل كامل مع حجز الاستشارات.",
-        "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Swiper.js", "AOS"],
+        "tags": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Bootstrap 5",
+          "Swiper.js",
+          "AOS"
+        ],
         "category": "واجهة أمامية",
         "liveUrl": "https://masfer.netlify.app/",
         "repoUrl": "private"
@@ -154,7 +205,18 @@
         "title": "Task Management App - تطبيق إدارة المهام",
         "image": "/images/task-management.png",
         "description": "تطبيق إدارة مهام متكامل (MERN) بمصادقة آمنة، وعزل المهام لكل مستخدم، وعمليات CRUD، وبحث وتصفية وتصفح، مع تحقق صارم من صحة البيانات. مبني بواجهة خلفية Express بلغة TypeScript وواجهة أمامية React متجاوبة.",
-        "tags": ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "JWT", "Zod", "TanStack Query", "Zustand", "Tailwind CSS"],
+        "tags": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "JWT",
+          "Zod",
+          "TanStack Query",
+          "Zustand",
+          "Tailwind CSS"
+        ],
         "category": "Full Stack",
         "liveUrl": "https://task-management-client-rosy.vercel.app",
         "repoUrl": "https://github.com/mohamed080/task-management"
@@ -164,7 +226,18 @@
         "title": "CourseHub API - واجهة منصة تعليمية",
         "image": "",
         "description": "REST API جاهزة للإنتاج لمنصة تعلم إلكتروني، تتضمن مصادقة متعددة الأدوار، وإدارة الدورات والتسجيلات، وتعليقات الدروس، والشهادات، والمراجعات، وقوائم الأمنيات، وسير المدرسين، والتحليلات، وخدمات الدفع والوسائط.",
-        "tags": ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Cloudinary", "Paymob", "Nodemailer", "Swagger", "Railway"],
+        "tags": [
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "JWT",
+          "Cloudinary",
+          "Paymob",
+          "Nodemailer",
+          "Swagger",
+          "Railway"
+        ],
         "category": "خلفية",
         "liveUrl": "",
         "repoUrl": "https://github.com/mohamed080/coursehub-api"
@@ -176,39 +249,53 @@
     "title": "تقنيات أعيش\nوأتنفس معها.",
     "subtitle": "مجموعة أدوات مصقولة عبر سنوات من الهندسة الفعلية.",
     "categories": {
+      "all": "جميع التقنيات",
       "frontend": "الواجهة الأمامية",
       "backend": "الواجهة الخلفية (Backend)",
       "database": "قواعد البيانات",
       "tools": "الأدوات و DevOps"
     },
+    "stats": {
+      "technologies": "تقنية أساسية",
+      "architecture": "هيكلية وبناء كود نظيف",
+      "production": "مستوى إنتاجي عالي"
+    },
     "items": {
       "frontend": [
-        { "name": "React / Next.js", "level": 95 },
-        { "name": "TypeScript", "level": 92 },
-        { "name": "JavaScript (ES6+)", "level": 95 },
-        { "name": "HTML5 / CSS3", "level": 95 },
-        { "name": "Tailwind CSS", "level": 95 },
-        { "name": "MUI / Bootstrap", "level": 85 }
+        { "name": "React / Next.js" },
+        { "name": "TypeScript" },
+        { "name": "JavaScript (ES6+)" },
+        { "name": "HTML5 / CSS3" },
+        { "name": "Tailwind CSS" },
+        { "name": "shadcn/ui" },
+        { "name": "Redux / Zustand" },
+        { "name": "React Query" },
+        { "name": "MUI / Bootstrap" },
+        { "name": "React Hook Form" },
+        { "name": "Axios" },
+        { "name": "Framer Motion" },
+        { "name": "GSAP" }
       ],
       "backend": [
-        { "name": "Node.js", "level": 85 },
-        { "name": "Express.js", "level": 85 },
-        { "name": "RESTful APIs", "level": 90 },
-        { "name": "Auth (JWT, OAuth)", "level": 88 },
-        { "name": "Zod Validation", "level": 90 }
+        { "name": "Node.js" },
+        { "name": "Express.js" },
+        { "name": "RESTful APIs" },
+        { "name": "JWT Authentication" },
+        { "name": "Refresh Tokens" },
+        { "name": "Cookie Authentication" },
+        { "name": "Role-Based Authorization (RBAC)" },
+        { "name": "Express Validator" },
+        { "name": "Multer" },
+        { "name": "Nodemailer" },
+        { "name": "Zod Validation" }
       ],
       "database": [
-        { "name": "MongoDB", "level": 85 },
-        { "name": "Mongoose", "level": 85 },
-        { "name": "PostgreSQL", "level": 75 },
-        { "name": "Prisma", "level": 70 }
+        { "name": "MongoDB" },
+        { "name": "Mongoose" },
+        { "name": "PostgreSQL" },
+        { "name": "Prisma" }
       ],
-      "tools": [
-        { "name": "Git & GitHub", "level": 90 },
-        { "name": "Redux / Zustand", "level": 90 },
-        { "name": "React Query", "level": 88 },
-        { "name": "Postman / Swagger", "level": 85 }
-      ]
+      "tools": [{ "name": "Git & GitHub" }, { "name": "Postman / Swagger" }]
     }
   },
   "experience": {
